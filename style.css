@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+}

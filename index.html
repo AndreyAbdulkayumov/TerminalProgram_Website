@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Терминал Modbus TCP/RTU/ASCII</title>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-button" onclick="openTab('cardInfo')">Реквизиты карты</button>
+        <button class="tab-button" onclick="openTab('softwareLinks')">Ссылки на ПО</button>
+    </div>
+
+    <div id="cardInfo" class="tab-content">
+        <h2>Банковская карта (Сбербанк)</h2>
+        <p>1234 5678 9012 3456</p>
+        <h2>Криптокошелек</h2>
+        <p>fjkhdfhjvfkjdhvdfvnkddfvdfg</p>
+    </div>
+
+    <div id="softwareLinks" class="tab-content" style="display:none;">
+        <h2>Ссылки на скачивание ПО</h2>
+        <ul>
+            <li><a href="https://example.com/software1">2.7.0</a></li>
+            <li><a href="https://example.com/software2">3.0.0</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
