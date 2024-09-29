@@ -50,6 +50,7 @@ ul li {
 
 main {
     text-align: center; 
+    flex: 1; /* Основной контент занимает оставшееся пространство */
 }
 
 .rectangle {
@@ -58,5 +59,50 @@ main {
     padding: 20px; /* Внутренние отступы */
     margin: 20px auto; /* Автоматические отступы по бокам для центрирования */
     width: 40%; /* Ширина прямоугольника */
+    overflow: auto; /* Добавляем прокрутку при переполнении */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+}
+
+footer {
+    background-color: #333; /* Цвет фона */
+    color: white; /* Цвет текста */
+    text-align: center; /* Центрируем текст */
+    padding: 20px; /* Внутренние отступы */
+    display: flex; /* Используем Flexbox */
+    flex-direction: column; /* Располагаем элементы по вертикали */
+    align-items: center; /* Центрируем элементы по горизонтали */
+}
+
+.footer-content {
+    margin-bottom: 10px; /* Отступ снизу для разделения */
+}
+
+.social-links {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.social-links li {
+    display: inline; /* Располагаем элементы в одну линию */
+    margin: 0 10px; /* Отступы между ссылками */
+}
+
+.icon-button {
+    display: inline-flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Центрируем иконку и текст по вертикали */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    padding: 10px 15px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругление углов */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 10px; /* Отступы между кнопками */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.icon-button:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+}
+
+.icon-button i {
+    margin-right: 5px; /* Отступ между иконкой и текстом */
 }
