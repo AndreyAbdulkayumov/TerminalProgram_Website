@@ -53,6 +53,23 @@ main {
     flex: 1; /* Основной контент занимает оставшееся пространство */
 }
 
+table {
+    min-width: 400px;
+    width: auto; /* Ширина таблицы */
+    margin: 20px auto; /* Центрирование таблицы */
+    border-collapse: collapse; /* Убирает двойные границы */
+    table-layout: fixed; /* Фиксированная ширина столбцов */
+}
+th, td {
+    border: 1px solid #ddd; /* Рамка вокруг ячеек */
+    padding: 8px; /* Отступы внутри ячеек */
+    text-align: center; /* Выравнивание текста по центру */
+    width: 33.33%; /* Ширина каждого столбца (равномерно) */
+}
+th {
+    background-color: #f2f2f2; /* Цвет фона для заголовков */
+}
+
 .rectangle {
     background-color: #fff; /* Фоновый цвет */
     border-radius: 15px; /* Скругление углов */

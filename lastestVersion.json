@@ -1,4 +1,5 @@
 {
     "Version": "3.0.0",
-    "DownloadLink": "https://example.com/download"
+    "DownloadLink_Windows": "https://example.com/download_windows",
+    "DownloadLink_Linux": "https://example.com/download_linux"
 }
