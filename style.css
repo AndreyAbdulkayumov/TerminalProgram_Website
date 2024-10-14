@@ -54,7 +54,7 @@ main {
 }
 
 table {
-    min-width: 400px;
+    min-width: 300px;
     width: auto; /* Ширина таблицы */
     margin: 20px auto; /* Центрирование таблицы */
     border-collapse: collapse; /* Убирает двойные границы */
