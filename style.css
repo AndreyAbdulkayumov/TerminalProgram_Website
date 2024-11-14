@@ -94,6 +94,11 @@ footer {
     align-items: center; /* Центрируем элементы по горизонтали */
 }
 
+.articleLink {
+    display: block; /* Делает ссылки блочными элементами */
+    margin-bottom: 20px; /* Устанавливает отступ снизу */
+}
+
 .footer-content {
     margin-bottom: 10px; /* Отступ снизу для разделения */
 }
