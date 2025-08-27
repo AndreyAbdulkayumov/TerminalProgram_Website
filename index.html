@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="index.html">Статьи</a>
+                    <a href="index.html">Описание</a>
                 </li>
                 <li>
                     <a href="downloads.html">Загрузки</a>
@@ -25,12 +25,64 @@
     </header>
 
     <main>
-        <h1>Статьи на Хабр</h1>
-        <a class="articleLink" href="https://habr.com/ru/articles/922944/">CoreBus: Часть 5 — попытка использования Native AOT</a>
-        <a class="articleLink" href="https://habr.com/ru/articles/895692/">Кроссплатформенный терминал Modbus TCP / RTU / ASCII с открытым исходным кодом: Часть 4</a>
-        <a class="articleLink" href="https://habr.com/ru/articles/871788/">Кроссплатформенный терминал Modbus TCP / RTU / ASCII с открытым исходным кодом: Часть 3</a>
-        <a class="articleLink" href="https://habr.com/ru/articles/854824/">Кроссплатформенный терминал Modbus TCP / RTU / ASCII с открытым исходным кодом: Часть 2</a>
-        <a class="articleLink" href="https://habr.com/ru/articles/795387/">Терминал Modbus TCP / RTU / ASCII с открытым исходным кодом: Часть 1</a>
+
+        <h2>CoreBus</h2>
+
+        <div class="intro-content">
+            
+            <p><strong>CoreBus</strong> — кроссплатформенный терминал для работы с COM-портами и TCP-сокетами с поддержкой протоколов Modbus TCP / RTU / ASCII.</p>
+            
+            <img src="Resources/ModbusDark.png" alt="Режимы работы CoreBus" class="content-image">
+
+            <p>Основные возможности приложения:</p>
+            
+            <ol class="features-list numbered">
+                <li>Два режима работы: "Без протокола" и "Modbus".</li>
+                <li>
+                    <p>"Без протокола":</p>
+                    <ol class="nested-list">
+                        <li>Работа с данными в строковом или байтовом формате.</li>
+                        <li>Поддержка разных кодировок.</li>
+                        <li>Три режима отправки: одиночная, цикличная, отправка файла.</li>
+                    </ol>
+                </li>                
+                <li>
+                    <p>"Modbus":</p>
+                    <ol class="nested-list">
+                        <li>Поддержка различных вариаций протокола Modbus: TCP, RTU, ASCII и RTU / ASCII over TCP.</li>
+                        <li>Удобная работа с функциями записи.</li>
+                        <li>Возможность работы с числами типа float.</li>
+                        <li>Возможность работы с бинарными данными.</li>
+                        <li>Цикличный опрос.</li>
+                        <li>Modbus сканер, который осуществляет поиск устройств на линии связи.</li>
+                    </ol>
+                </li>                
+                <li>
+                    <p>Макросы:</p>
+                    <ol class="nested-list">
+                        <li>Отдельные макросы для каждого режима работы.</li>
+                        <li>Макрос состоит из неограниченного количества команд (действий).</li>
+                        <li>Для Modbus макросов предусмотрена возможность выставления общего Slave ID для всего макроса.</li>
+                        <li>Импорт и экспорт макросов.</li>
+                    </ol>
+                </li>
+                <li>Темная и светлая темы приложения.</li>
+                <li>Пресеты с пользовательскими настройками.</li>
+                <li>Кроссплатформенность: Windows, Linux.</li>
+            </ol>
+            <p>Приложение тестировалось на Windows 10/11, Ubuntu и Astra Linux Common Edition.</p>
+
+        </div>        
+
+        <div class="intro-content">
+            <h2>Статьи на Хабр</h2>
+            <a class="articleLink" href="https://habr.com/ru/articles/922944/">CoreBus: Часть 5 — попытка использования Native AOT</a>
+            <a class="articleLink" href="https://habr.com/ru/articles/895692/">Кроссплатформенный терминал Modbus TCP / RTU / ASCII с открытым исходным кодом: Часть 4</a>
+            <a class="articleLink" href="https://habr.com/ru/articles/871788/">Кроссплатформенный терминал Modbus TCP / RTU / ASCII с открытым исходным кодом: Часть 3</a>
+            <a class="articleLink" href="https://habr.com/ru/articles/854824/">Кроссплатформенный терминал Modbus TCP / RTU / ASCII с открытым исходным кодом: Часть 2</a>
+            <a class="articleLink" href="https://habr.com/ru/articles/795387/">Терминал Modbus TCP / RTU / ASCII с открытым исходным кодом: Часть 1</a>
+        </div>
+
     </main>
 
     <footer>    
