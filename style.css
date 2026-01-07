@@ -11,50 +11,68 @@ body {
     background-color: #f4f4f4; /* Фоновый цвет для лучшего контраста */
 }
 
+
+/* Header */
+
+
 header {
-    background-color: #333;
+    height: 60px;
+    background: #333;
+    position: sticky;
     top: 0;
     z-index: 100;
-}
-
-nav {
-    width: 100%;
+    display: grid;
+    place-items: center;
 }
 
 nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 2px;
 }
 
 nav li {
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    height: 100%;
-    max-width: 200px;
+    height: 58px;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    padding: 1rem 1.5rem;
-    background-color: transparent;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    text-align: center;
-    display: block;
     height: 100%;
-    margin: 0;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0 8px;
+    transition: background-color 0.3s ease; 
+    background: transparent;
+}
+
+/* Только для четвертой кнопки "Поддержать проект" */
+nav li:nth-child(4) a {
+    text-align: center;
 }
 
 nav a:hover {
-    background-color: #555;
-    color: white;
+    background: #555;
 }
+
+/* Десктоп */
+@media (min-width: 768px) {
+    /* Только для четвертой кнопки "Поддержать проект" */
+    nav li:nth-child(4) a {
+        white-space: nowrap;
+    }
+}
+
+
+/* Контент */
+
 
 main {
     text-align: center; 
@@ -97,55 +115,6 @@ th {
 
 .reactangle p {
     white-space: nowrap; /* Запрещаем перенос слов */
-}
-
-footer {
-    background-color: #333; /* Цвет фона */
-    color: white; /* Цвет текста */
-    text-align: center; /* Центрируем текст */
-    padding: 20px; /* Внутренние отступы */
-    display: flex; /* Используем Flexbox */
-    flex-direction: column; /* Располагаем элементы по вертикали */
-    align-items: center; /* Центрируем элементы по горизонтали */
-}
-
-.articleLink {
-    display: block; /* Делает ссылки блочными элементами */
-    margin-bottom: 20px; /* Устанавливает отступ снизу */
-}
-
-.footer-content {
-    margin-bottom: 10px; /* Отступ снизу для разделения */
-}
-
-.social-links {
-    list-style-type: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем отступы */
-}
-
-.social-links li {
-    display: inline; /* Располагаем элементы в одну линию */
-    margin: 0 10px; /* Отступы между ссылками */
-}
-
-.icon-button {
-    display: inline-flex; /* Используем flexbox для выравнивания */
-    align-items: center; /* Центрируем иконку и текст по вертикали */
-    background-color: #007bff; /* Цвет фона кнопки */
-    color: white; /* Цвет текста */
-    padding: 10px 15px; /* Внутренние отступы */
-    border-radius: 5px; /* Скругление углов */
-    text-decoration: none; /* Убираем подчеркивание */
-    margin: 0 10px; /* Отступы между кнопками */
-    transition: background-color 0.3s; /* Плавный переход цвета фона */
-}
-
-.icon-button:hover {
-    background-color: #0056b3; /* Цвет фона при наведении */
-}
-
-.icon-button i {
-    margin-right: 5px; /* Отступ между иконкой и текстом */
 }
 
 /* Стили для основного контента */
@@ -213,4 +182,55 @@ footer {
     .nested-list {
         padding-left: 20px;
     }
+}
+
+/* Footer */
+
+footer {
+    background-color: #333; /* Цвет фона */
+    color: white; /* Цвет текста */
+    text-align: center; /* Центрируем текст */
+    padding: 20px; /* Внутренние отступы */
+    display: flex; /* Используем Flexbox */
+    flex-direction: column; /* Располагаем элементы по вертикали */
+    align-items: center; /* Центрируем элементы по горизонтали */
+}
+
+.articleLink {
+    display: block; /* Делает ссылки блочными элементами */
+    margin-bottom: 20px; /* Устанавливает отступ снизу */
+}
+
+.footer-content {
+    margin-bottom: 10px; /* Отступ снизу для разделения */
+}
+
+.social-links {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.social-links li {
+    display: inline; /* Располагаем элементы в одну линию */
+    margin: 0 10px; /* Отступы между ссылками */
+}
+
+.icon-button {
+    display: inline-flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Центрируем иконку и текст по вертикали */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    padding: 10px 15px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругление углов */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 10px; /* Отступы между кнопками */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.icon-button:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+}
+
+.icon-button i {
+    margin-right: 5px; /* Отступ между иконкой и текстом */
 }
