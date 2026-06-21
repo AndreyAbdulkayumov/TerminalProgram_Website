@@ -5,9 +5,10 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    height: 100vh; /* Высота вьюпорта */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 60px;
     background-color: #f4f4f4; /* Фоновый цвет для лучшего контраста */
 }
 
@@ -15,12 +16,14 @@ body {
 /* Header */
 
 
-header {
+body > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     height: 60px;
     background: #333;
-    position: sticky;
-    top: 0;
-    z-index: 100;
     display: grid;
     place-items: center;
 }
@@ -233,4 +236,306 @@ footer {
 
 .icon-button i {
     margin-right: 5px; /* Отступ между иконкой и текстом */
+}
+
+
+/* Страница загрузок — светлая тема */
+
+
+html:has(body.downloads-page) {
+    scrollbar-gutter: stable;
+}
+
+body.downloads-page {
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+.downloads-main {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    text-align: center;
+}
+
+.downloads-title {
+    margin: 28px 0 24px;
+    font-size: 1.75rem;
+    color: #222;
+}
+
+.sf-cloud {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    padding: 24px 20px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sf-cloud__version {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.sf-cloud__subtitle {
+    margin: 0 0 16px;
+    font-size: 0.95rem;
+    color: #777;
+}
+
+.sf-cloud__button {
+    display: inline-block;
+    line-height: 0;
+}
+
+.sf-cloud__button img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sf-cloud__stats {
+    display: inline-block;
+    margin-top: 12px;
+    line-height: 0;
+}
+
+.version-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+.version-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.version-card--current {
+    border-color: #c8e6c9;
+}
+
+.version-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.version-card__title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.version-card__version {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.version-card__badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.version-card__date {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.version-card__changelog {
+    display: grid;
+    grid-template-rows: auto 0fr;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-bottom: 16px;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.version-card__changelog[open] {
+    grid-template-rows: auto 1fr;
+}
+
+.version-card__changelog summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    list-style: none;
+    user-select: none;
+}
+
+.version-card__changelog summary::-webkit-details-marker {
+    display: none;
+}
+
+.version-card__changelog summary::after {
+    content: "\25BC";
+    flex-shrink: 0;
+    width: 12px;
+    font-size: 0.7rem;
+    color: #aaa;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.version-card__changelog[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.version-card__changelog-content {
+    overflow: hidden;
+    min-height: 0;
+    min-width: 0;
+    max-width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.version-card__changelog[open] .version-card__changelog-content {
+    opacity: 1;
+    padding-top: 10px;
+}
+
+.version-card__changelog-content ul {
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 12px 12px 12px 28px;
+    margin: 0;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.version-card__changelog-content li {
+    margin-bottom: 6px;
+    color: #444;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.version-card__changelog-content li:last-child {
+    margin-bottom: 0;
+}
+
+.version-card__changelog-empty {
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 0;
+    color: #999;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.version-card__downloads {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+
+.version-card__mirror-title {
+    margin: 0 0 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: none;
+}
+
+.version-card__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.version-card__links li {
+    margin-bottom: 6px;
+}
+
+.version-card__links li:last-child {
+    margin-bottom: 0;
+}
+
+.version-card__links a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.version-card__links a:hover {
+    text-decoration: underline;
+}
+
+.version-card__empty {
+    margin: 0;
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    .downloads-title {
+        font-size: 1.4rem;
+        margin: 20px 0 16px;
+    }
+
+    .sf-cloud {
+        padding: 20px 16px;
+        margin-bottom: 24px;
+    }
+
+    .version-card {
+        padding: 16px;
+    }
+
+    .version-card__downloads {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .version-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .version-card__changelog {
+        transition: none;
+    }
+
+    .version-card__changelog-content {
+        transition: none;
+    }
+
+    .version-card__changelog summary::after {
+        transition: none;
+    }
 }
