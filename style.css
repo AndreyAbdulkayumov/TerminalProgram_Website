@@ -605,7 +605,7 @@ body.downloads-page {
 
 .download-btn--sourceforge::before {
     width: 18px;
-    background-image: url("Resources/icons/sourceforge-icon.svg");
+    background-image: url("Resources/icons/sourceforge.svg");
 }
 
 .download-btn--sourceforge::after {
