@@ -30,17 +30,6 @@
     <main class="downloads-main">
         <h2 class="downloads-title">Версии приложения</h2>
 
-        <section class="sf-cloud" aria-label="Скачать с SourceForge">
-            <p class="sf-cloud__version">Последняя версия: <strong>3.5.1</strong></p>
-            <p class="sf-cloud__subtitle">Скачать с SourceForge</p>
-            <a class="sf-cloud__button" href="https://sourceforge.net/projects/corebus/files/latest/download">
-                <img alt="Download CoreBus" src="https://a.fsdn.com/con/app/sf-download-button" width="276" height="48" srcset="https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x">
-            </a>
-            <a class="sf-cloud__stats" href="https://sourceforge.net/projects/corebus/files/latest/download">
-                <img alt="Количество скачиваний на SourceForge" src="https://img.shields.io/sourceforge/dt/corebus.svg">
-            </a>
-        </section>
-
         <div class="version-list">
 
             <article class="version-card version-card--current">
@@ -63,22 +52,41 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/UeOmscsdytnOfg">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/YQjKCjZ5fyaKZA">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/TxqqeZvsH5qG1w">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/UeOmscsdytnOfg">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/YQjKCjZ5fyaKZA">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/TxqqeZvsH5qG1w">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/UeOmscsdytnOfg" title="CoreBus_3.5.1_win_x64_installer"></a>
+                                    <a class="download-btn download-btn--gdrive" href="https://drive.google.com/drive/folders/1pvLJPazb1N_oZziJhwB0MyvnNDjAp-Ry?usp=sharing" title="CoreBus_3.5.1_win_x64_installer"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.5.1_win_x64_installer.exe/download" title="CoreBus_3.5.1_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/YQjKCjZ5fyaKZA" title="CoreBus_3.5.1_win_x64_portable"></a>
+                                    <a class="download-btn download-btn--gdrive" href="https://drive.google.com/drive/folders/1t2mw-QoXOL0L427qagG0atfB6Jzw7TV8?usp=sharing" title="CoreBus_3.5.1_win_x64_portable"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.5.1_win_x64_portable.zip/download" title="CoreBus_3.5.1_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/TxqqeZvsH5qG1w" title="CoreBus_3.5.1_linux_x64"></a>
+                                    <a class="download-btn download-btn--gdrive" href="https://drive.google.com/drive/folders/1ru5bDEPWlNXJOnYGSnJMZuOdz2DQdAP8?usp=sharing" title="CoreBus_3.5.1_linux_x64"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.5.1_linux_x64.zip/download" title="CoreBus_3.5.1_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -96,18 +104,38 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/HQ8iCOsftXbEAA">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/OikuuZGOrrVFAQ">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/-IpUVR-L4xbU5w">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/HQ8iCOsftXbEAA" title="CoreBus_3.5.0_win_x64_installer"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.5.0_win_x64_installer.exe/download" title="CoreBus_3.5.0_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/OikuuZGOrrVFAQ" title="CoreBus_3.5.0_win_x64_portable"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.5.0_win_x64_portable.zip/download" title="CoreBus_3.5.0_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/-IpUVR-L4xbU5w" title="CoreBus_3.5.0_linux_x64"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.5.0_linux_x64.zip/download" title="CoreBus_3.5.0_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -125,18 +153,38 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/1-Xw3GeHjCcGsQ">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/Ghgh-TVs5Zehtw">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/GQUeNTMgFh23oQ">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/1-Xw3GeHjCcGsQ" title="CoreBus_3.4.0_win_x64_installer"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.4.0_win_x64_installer.exe/download" title="CoreBus_3.4.0_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/Ghgh-TVs5Zehtw" title="CoreBus_3.4.0_win_x64_portable"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.4.0_win_x64_portable.zip/download" title="CoreBus_3.4.0_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/GQUeNTMgFh23oQ" title="CoreBus_3.4.0_linux_x64"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.4.0_linux_x64.zip/download" title="CoreBus_3.4.0_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -154,18 +202,38 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/J7Esm-u2_Ux_tw">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/iVkgv7qgJtkG3w">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/jazhQS611NqJFA">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/J7Esm-u2_Ux_tw" title="CoreBus_3.3.3_win_x64_installer"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.3.3_win_x64_installer.exe/download" title="CoreBus_3.3.3_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/iVkgv7qgJtkG3w" title="CoreBus_3.3.3_win_x64_portable"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.3.3_win_x64_portable.zip/download" title="CoreBus_3.3.3_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/jazhQS611NqJFA" title="CoreBus_3.3.3_linux_x64"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.3.3_linux_x64.zip/download" title="CoreBus_3.3.3_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -183,18 +251,38 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/jz0ob23kXQlWpA">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/beZ08ibO6S_lKA">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/mYzPtvrCbCYgQg">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/jz0ob23kXQlWpA" title="CoreBus_3.3.2_win_x64_installer"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.3.2_win_x64_installer.exe/download" title="CoreBus_3.3.2_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/beZ08ibO6S_lKA" title="CoreBus_3.3.2_win_x64_portable"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.3.2_win_x64_portable.zip/download" title="CoreBus_3.3.2_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/mYzPtvrCbCYgQg" title="CoreBus_3.3.2_linux_x64"></a>
+                                    <a class="download-btn download-btn--sourceforge" href="https://sourceforge.net/projects/corebus/files/CoreBus_3.3.2_linux_x64.zip/download" title="CoreBus_3.3.2_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -212,18 +300,35 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/41jGmNXDHiqWyg">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/qbQsJHaND9-MgA">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/C0wIoaJa6Zo97A">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/41jGmNXDHiqWyg" title="CoreBus_3.3.1_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/qbQsJHaND9-MgA" title="CoreBus_3.3.1_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/C0wIoaJa6Zo97A" title="CoreBus_3.3.1_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -241,18 +346,35 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/qZTH8KxA6cfDoA">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/dDd0yiA_cqjU0w">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/o8yHVNCMfUVhng">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/qZTH8KxA6cfDoA" title="CoreBus_3.3.0_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/dDd0yiA_cqjU0w" title="CoreBus_3.3.0_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/o8yHVNCMfUVhng" title="CoreBus_3.3.0_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -270,18 +392,35 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/pEmGTzkKfC7S5w">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/enRO8EFviQHqEA">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/bc0u3-32RchOTg">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/pEmGTzkKfC7S5w" title="CoreBus_3.2.1_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/enRO8EFviQHqEA" title="CoreBus_3.2.1_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/bc0u3-32RchOTg" title="CoreBus_3.2.1_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -299,18 +438,35 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/I3g5_S2M8JcYmA">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/vs1EjAcv2Njaww">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/u-BFdEx9U7LH9Q">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/I3g5_S2M8JcYmA" title="CoreBus_3.2.0_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/vs1EjAcv2Njaww" title="CoreBus_3.2.0_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/u-BFdEx9U7LH9Q" title="CoreBus_3.2.0_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -328,18 +484,35 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/EZop2wZHqfzA0A">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/Kd0Cmv06y00Xqw">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/F-wldu3aDunPgw">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/EZop2wZHqfzA0A" title="CoreBus_3.1.0_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/Kd0Cmv06y00Xqw" title="CoreBus_3.1.0_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/F-wldu3aDunPgw" title="CoreBus_3.1.0_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -357,18 +530,35 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/Jv4LL3C19jmSNQ">win-x64 installer</a></li>
-                            <li><a href="https://disk.yandex.ru/d/cO_iBcdilOQ5YQ">win-x64 portable</a></li>
-                            <li><a href="https://disk.yandex.ru/d/RSCfHxgfJ952YQ">linux-x64 portable</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/Jv4LL3C19jmSNQ" title="CoreBus_3.0.0_win_x64_installer"></a>
+                                </div>
+                            </div>
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/cO_iBcdilOQ5YQ" title="CoreBus_3.0.0_win_x64_portable"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="platform-block platform-block--linux">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Portable x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/RSCfHxgfJ952YQ" title="CoreBus_3.0.0_linux_x64"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -386,16 +576,18 @@
                     </div>
                 </details>
                 <div class="version-card__downloads">
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Google Drive</h3>
-                        <p class="version-card__empty">—</p>
-                    </div>
-                    <div class="version-card__mirror">
-                        <h3 class="version-card__mirror-title">Яндекс.Диск</h3>
-                        <ul class="version-card__links">
-                            <li><a href="https://disk.yandex.ru/d/mBcN5eJWdL_cJA">win-x64 installer</a></li>
-                        </ul>
-                    </div>
+                    <h3 class="version-card__downloads-title">Загрузки</h3>
+                    <section class="platform-block platform-block--windows">
+                        <span class="platform-label"></span>
+                        <div class="platform-block__rows">
+                            <div class="download-row">
+                                <span class="download-row__label">Installer x64</span>
+                                <div class="download-row__buttons">
+                                    <a class="download-btn download-btn--yandex" href="https://disk.yandex.ru/d/mBcN5eJWdL_cJA" title="CoreBus_2.7.0_win_x64_installer"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </article>
 
@@ -410,11 +602,17 @@
                     <a href="mailto:andrey.abdulkayumov@gmail.com?subject=Письмо от пользователя CoreBus" class="icon-button"><i class="fa fa-envelope"></i> Email</a>
                 </li>
                 <li>
-                    <a href="https://github.com/AndreyAbdulkayumov/CoreBus" target="_blank" class="icon-button"><i class="fa fa-github"></i> GitHub</a>
+                    <a href="https://github.com/AndreyAbdulkayumov/CoreBus" target="_blank" rel="noopener noreferrer" class="icon-button"><i class="fa fa-github"></i> GitHub</a>
                 </li>
             </ul>
         </div>
     </footer>
 
+    <script>
+        document.querySelectorAll(".download-btn").forEach(function (button) {
+            button.target = "_blank";
+            button.rel = "noopener noreferrer";
+        });
+    </script>
 </body>
 </html>
