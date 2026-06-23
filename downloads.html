@@ -106,7 +106,12 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Новый функционал</h4>
+                            <ul>
+                                <li>Добавлена поддержка нескольких языков интерфейса: Русский, Английский, Хинди, Китайский (упрощенный), Немецкий, Испанский, Французский.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -156,7 +161,14 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Новый функционал</h4>
+                            <ul>
+                                <li>Modbus: добавлен режим мониторинга.</li>
+                                <li>Modbus сканер: добавлены шаблоны для функций опроса.</li>
+                                <li>Мелкие исправления и рефакторинг.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -206,7 +218,13 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Новый функционал</h4>
+                            <ul>
+                                <li>Теперь при работе с макросами используется только одно окно (рабочее поле или редактирование). Неиспользуемое окно скрывается.</li>
+                                <li>Рефакторинг Unit тестов.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -256,7 +274,21 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Новый функционал</h4>
+                            <ul>
+                                <li>Modbus: теперь если сработал таймаут, то выводится содержимое запроса.</li>
+                                <li>Расширен функционал окна &quot;О приложении&quot;.</li>
+                            </ul>
+                            <h4 class="changelog-section__title">Исправление ошибок</h4>
+                            <ul>
+                                <li>Редкое зависание при записи/чтении Modbus.</li>
+                                <li>Продолжение работы цикличного опроса в случае появления ошибки.</li>
+                                <li>Неправильное отображение количества записанных регистров Modbus после отправки команды макроса.</li>
+                                <li>При отправке отдельных команд макроса не учитывается единый Slave ID.</li>
+                                <li>При использовании единого Slave ID в макросе учитываются ошибки от полей Slave ID команд.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -306,7 +338,13 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Изменения</h4>
+                            <ul>
+                                <li>В Modbus сканер добавлен выбор протокола (Modbus RTU или Modbus ASCII), по которому происходит поиск устройств.</li>
+                                <li>Сокращены некоторые имена в UI.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -353,7 +391,17 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Изменения</h4>
+                            <ul>
+                                <li>Добавлена возможность использовать единый Slave ID для Modbus макроса.</li>
+                                <li>Теперь все ошибки, появившиеся при работе макроса, собираются в единое сообщение, а не показываются по отдельности.</li>
+                                <li>Добавлены улучшения для более удобной работы с окном макросов.</li>
+                                <li>Исправлен баг с получением некорректного пути при выборе папки или файла.</li>
+                                <li>Оптимизации.</li>
+                                <li>Рефакторинг.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -400,7 +448,13 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Изменения</h4>
+                            <ul>
+                                <li>В MessageBox появились иконки, которые зависят от типа сообщения.</li>
+                                <li>В MessageBox стал доступен &quot;Отчет об ошибке&quot;, который появляется у сообщений с типом ошибки. Отчет можно посмотреть в отдельном окне, копировать в буфер обмена или в текстовый файл.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -447,7 +501,15 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Изменения</h4>
+                            <ul>
+                                <li>Расширена работа с макросами. Макрос разделен на команды. Теперь в одном макросе можно отправить несколько сообщений за раз.</li>
+                                <li>В проект внедрен DI.</li>
+                                <li>Рефакторинг. Уменьшена связность между компонентами.</li>
+                                <li>Исправлены мелкие ошибки.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -494,7 +556,17 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Изменения</h4>
+                            <ul>
+                                <li>Добавлена поддержка Modbus RTU over TCP.</li>
+                                <li>Добавлена поддержка Modbus ASCII over TCP.</li>
+                                <li>Добавлена возможность работы с байтами в режиме &quot;Без протокола&quot;.</li>
+                                <li>Добавлены макросы.</li>
+                                <li>Добавлено руководство пользователя.</li>
+                                <li>Исправление ошибок, мелкие улучшения и рефакторинг.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -541,7 +613,19 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Изменения</h4>
+                            <ul>
+                                <li>Проект перенесен с WPF на AvaloniaUI.</li>
+                                <li>Изменен дизайн.</li>
+                                <li>Добавлен Modbus сканер.</li>
+                                <li>Modbus: для каждой функции записи сделан свой вариант дизайна.</li>
+                                <li>Modbus: добавлено ведение истории обмена.</li>
+                                <li>Modbus: добавлена возможность работы с бинарными данными.</li>
+                                <li>Modbus: добавлена возможность работы с данными типа float.</li>
+                                <li>Исправлены ошибки версии 2.7.0.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -588,7 +672,11 @@
                 <details class="version-card__changelog">
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <p class="version-card__changelog-empty">—</p>
+                        <section class="changelog-section">
+                            <ul>
+                                <li>Первая публичная версия.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
