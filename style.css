@@ -312,19 +312,24 @@ body.downloads-page {
 }
 
 .version-card {
+    --latest: 0;
     width: 100%;
     max-width: 100%;
     min-width: 0;
     overflow-x: clip;
     background: #fff;
-    border: 1px solid #e8e8e8;
+    border: calc(1px + var(--latest) * 1px) solid color-mix(
+        in srgb,
+        #e8e8e8 calc((1 - var(--latest)) * 100%),
+        #a5d6a7 calc(var(--latest) * 100%)
+    );
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .version-card--current {
-    border: 2px solid #a5d6a7;
+    --latest: 1;
 }
 
 .version-card__header {
@@ -342,7 +347,7 @@ body.downloads-page {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: calc(var(--latest) * 8px);
 }
 
 .version-card__version {
@@ -356,8 +361,12 @@ body.downloads-page {
     font-weight: 600;
     background: #e8f5e9;
     color: #2e7d32;
-    padding: 3px 8px;
     border-radius: 4px;
+    overflow: hidden;
+    max-width: calc(var(--latest) * 10rem);
+    padding: calc(var(--latest) * 3px) calc(var(--latest) * 8px);
+    opacity: var(--latest);
+    white-space: nowrap;
 }
 
 .version-card__date {
@@ -420,18 +429,34 @@ body.downloads-page {
 
 .version-card__changelog[open] .version-card__changelog-content {
     opacity: 1;
-    padding-top: 10px;
-}
-
-.version-card__changelog-content ul {
+    margin-top: 16px;
     background: #fafafa;
     border: 1px solid #f0f0f0;
     border-radius: 8px;
-    padding: 12px 12px 12px 28px;
-    margin: 0;
+    padding: 12px 16px;
+    font-size: 1rem;
     line-height: 1.5;
+}
+
+.version-card__changelog-content ul {
+    padding: 0 0 0 16px;
+    margin: 0;
     overflow-wrap: anywhere;
     word-break: break-word;
+}
+
+.changelog-section + .changelog-section {
+    margin-top: 16px;
+}
+
+.changelog-section__title:not(:first-child) {
+    margin-top: 16px;
+}
+
+.changelog-section__title {
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: #222;
 }
 
 .version-card__changelog-content li {
@@ -446,10 +471,6 @@ body.downloads-page {
 }
 
 .version-card__changelog-empty {
-    background: #fafafa;
-    border: 1px solid #f0f0f0;
-    border-radius: 8px;
-    padding: 12px 16px;
     margin: 0;
     color: #999;
     overflow-wrap: anywhere;

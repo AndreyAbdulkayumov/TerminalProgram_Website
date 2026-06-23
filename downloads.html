@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreBus — Загрузки</title>
+    <title>CoreBus</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -43,12 +43,17 @@
                 <details class="version-card__changelog" open>
                     <summary>Что нового?</summary>
                     <div class="version-card__changelog-content">
-                        <ul>
-                            <li>Исправлена стабильность соединения Modbus RTU</li>
-                            <li>Добавлена поддержка экспорта логов в CSV</li>
-                            <li>Улучшен интерфейс режима мониторинга</li>
-                            <li>Исправлены мелкие ошибки локализации</li>
-                        </ul>
+                        <section class="changelog-section">
+                            <h4 class="changelog-section__title">Новый функционал</h4>
+                            <ul>
+                                <li>Добавлена поддержка Корейского и Португальского языков.</li>
+                            </ul>
+                            <h4 class="changelog-section__title">Исправление ошибок</h4>
+                            <ul>
+                                <li>При записи нескольких флагов (функция 0x0F) терялся последний байт данных, если он был равен 0.</li>
+                                <li>Исправлено некорректное отображение float чисел в режиме Modbus мониторинга.</li>
+                            </ul>
+                        </section>
                     </div>
                 </details>
                 <div class="version-card__downloads">
@@ -94,6 +99,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.5.0</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2026-05-09">9 мая 2026</time>
                 </header>
@@ -143,6 +149,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.4.0</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2026-04-10">10 апреля 2026</time>
                 </header>
@@ -192,6 +199,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.3.3</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2025-11-14">14 ноября 2025</time>
                 </header>
@@ -241,6 +249,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.3.2</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2025-10-01">1 октября 2025</time>
                 </header>
@@ -290,6 +299,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.3.1</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2025-09-02">2 сентября 2025</time>
                 </header>
@@ -336,6 +346,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.3.0</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2025-07-09">9 июля 2025</time>
                 </header>
@@ -382,6 +393,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.2.1</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2025-04-13">13 апреля 2025</time>
                 </header>
@@ -428,6 +440,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.2.0</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2025-03-30">30 марта 2025</time>
                 </header>
@@ -474,6 +487,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.1.0</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2025-01-06">6 января 2025</time>
                 </header>
@@ -520,6 +534,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">3.0.0</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2024-11-14">14 ноября 2024</time>
                 </header>
@@ -566,6 +581,7 @@
                 <header class="version-card__header">
                     <div class="version-card__title">
                         <span class="version-card__version">2.7.0</span>
+                        <span class="version-card__badge">Последняя версия</span>
                     </div>
                     <time class="version-card__date" datetime="2024-02-18">18 февраля 2024</time>
                 </header>
