@@ -83,29 +83,6 @@ main {
     margin-bottom: 20px; /* Отступ снизу для разделения */
 }
 
-table {
-    min-width: 300px;
-    width: auto; /* Ширина таблицы */
-    margin: 20px auto; /* Центрирование таблицы */
-    border-collapse: collapse; /* Убирает двойные границы */
-    table-layout: fixed; /* Фиксированная ширина столбцов */
-}
-.divider td {
-    height: 35px; /* Высота разделителя */
-    background-color: #f3f3f3; /* Цвет фона разделителя */
-    border-top: 1px solid #ccc; /* Верхняя граница разделителя */
-    border-bottom: 1px solid #ccc; /* Нижняя граница разделителя */
-}
-th, td {
-    border: 1px solid #ddd; /* Рамка вокруг ячеек */
-    padding: 8px; /* Отступы внутри ячеек */
-    text-align: center; /* Выравнивание текста по центру */
-    width: 33.33%; /* Ширина каждого столбца (равномерно) */
-}
-th {
-    background-color: #f2f2f2; /* Цвет фона для заголовков */
-}
-
 .rectangle {
     background-color: #fff; /* Фоновый цвет */
     border-radius: 15px; /* Скругление углов */
@@ -114,10 +91,6 @@ th {
     width: 50%; /* Ширина прямоугольника */
     overflow: auto; /* Добавляем прокрутку при переполнении */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для глубины */
-}
-
-.reactangle p {
-    white-space: nowrap; /* Запрещаем перенос слов */
 }
 
 /* Стили для основного контента */
@@ -265,43 +238,6 @@ body.downloads-page {
     color: #222;
 }
 
-.sf-cloud {
-    background: #fff;
-    border: 1px solid #e8e8e8;
-    border-radius: 16px;
-    padding: 24px 20px;
-    margin-bottom: 32px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-}
-
-.sf-cloud__version {
-    margin: 0 0 4px;
-    font-size: 1.1rem;
-    color: #222;
-}
-
-.sf-cloud__subtitle {
-    margin: 0 0 16px;
-    font-size: 0.95rem;
-    color: #777;
-}
-
-.sf-cloud__button {
-    display: inline-block;
-    line-height: 0;
-}
-
-.sf-cloud__button img {
-    max-width: 100%;
-    height: auto;
-}
-
-.sf-cloud__stats {
-    display: inline-block;
-    margin-top: 12px;
-    line-height: 0;
-}
-
 .version-list {
     display: flex;
     flex-direction: column;
@@ -445,10 +381,6 @@ body.downloads-page {
     word-break: break-word;
 }
 
-.changelog-section + .changelog-section {
-    margin-top: 16px;
-}
-
 .changelog-section__title:not(:first-child) {
     margin-top: 16px;
 }
@@ -468,13 +400,6 @@ body.downloads-page {
 
 .version-card__changelog-content li:last-child {
     margin-bottom: 0;
-}
-
-.version-card__changelog-empty {
-    margin: 0;
-    color: #999;
-    overflow-wrap: anywhere;
-    word-break: break-word;
 }
 
 .version-card__downloads {
@@ -642,11 +567,6 @@ body.downloads-page {
     .downloads-title {
         font-size: 1.4rem;
         margin: 20px 0 16px;
-    }
-
-    .sf-cloud {
-        padding: 20px 16px;
-        margin-bottom: 24px;
     }
 
     .version-card {
