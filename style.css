@@ -5,9 +5,10 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    height: 100vh; /* Высота вьюпорта */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 60px;
     background-color: #f4f4f4; /* Фоновый цвет для лучшего контраста */
 }
 
@@ -15,12 +16,14 @@ body {
 /* Header */
 
 
-header {
+body > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     height: 60px;
     background: #333;
-    position: sticky;
-    top: 0;
-    z-index: 100;
     display: grid;
     place-items: center;
 }
@@ -80,29 +83,6 @@ main {
     margin-bottom: 20px; /* Отступ снизу для разделения */
 }
 
-table {
-    min-width: 300px;
-    width: auto; /* Ширина таблицы */
-    margin: 20px auto; /* Центрирование таблицы */
-    border-collapse: collapse; /* Убирает двойные границы */
-    table-layout: fixed; /* Фиксированная ширина столбцов */
-}
-.divider td {
-    height: 35px; /* Высота разделителя */
-    background-color: #f3f3f3; /* Цвет фона разделителя */
-    border-top: 1px solid #ccc; /* Верхняя граница разделителя */
-    border-bottom: 1px solid #ccc; /* Нижняя граница разделителя */
-}
-th, td {
-    border: 1px solid #ddd; /* Рамка вокруг ячеек */
-    padding: 8px; /* Отступы внутри ячеек */
-    text-align: center; /* Выравнивание текста по центру */
-    width: 33.33%; /* Ширина каждого столбца (равномерно) */
-}
-th {
-    background-color: #f2f2f2; /* Цвет фона для заголовков */
-}
-
 .rectangle {
     background-color: #fff; /* Фоновый цвет */
     border-radius: 15px; /* Скругление углов */
@@ -111,10 +91,6 @@ th {
     width: 50%; /* Ширина прямоугольника */
     overflow: auto; /* Добавляем прокрутку при переполнении */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для глубины */
-}
-
-.reactangle p {
-    white-space: nowrap; /* Запрещаем перенос слов */
 }
 
 /* Стили для основного контента */
@@ -233,4 +209,396 @@ footer {
 
 .icon-button i {
     margin-right: 5px; /* Отступ между иконкой и текстом */
+}
+
+
+/* Страница загрузок — светлая тема */
+
+
+html:has(body.downloads-page) {
+    scrollbar-gutter: stable;
+}
+
+body.downloads-page {
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+.downloads-main {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    text-align: center;
+}
+
+.downloads-title {
+    margin: 28px 0 24px;
+    font-size: 1.75rem;
+    color: #222;
+}
+
+.version-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+.version-card {
+    --latest: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+    background: #fff;
+    border: calc(1px + var(--latest) * 1px) solid color-mix(
+        in srgb,
+        #e8e8e8 calc((1 - var(--latest)) * 100%),
+        #a5d6a7 calc(var(--latest) * 100%)
+    );
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.version-card--current {
+    --latest: 1;
+}
+
+.version-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.version-card__title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: calc(var(--latest) * 8px);
+}
+
+.version-card__version {
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.version-card__badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: calc(var(--latest) * 10rem);
+    padding: calc(var(--latest) * 3px) calc(var(--latest) * 8px);
+    opacity: var(--latest);
+    white-space: nowrap;
+}
+
+.version-card__date {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.version-card__changelog {
+    display: grid;
+    grid-template-rows: auto 0fr;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-bottom: 16px;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.version-card__changelog[open] {
+    grid-template-rows: auto 1fr;
+}
+
+.version-card__changelog summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    list-style: none;
+    user-select: none;
+}
+
+.version-card__changelog summary::-webkit-details-marker {
+    display: none;
+}
+
+.version-card__changelog summary::after {
+    content: "\25BC";
+    flex-shrink: 0;
+    width: 12px;
+    font-size: 0.7rem;
+    color: #aaa;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.version-card__changelog[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.version-card__changelog-content {
+    overflow: hidden;
+    min-height: 0;
+    min-width: 0;
+    max-width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.version-card__changelog[open] .version-card__changelog-content {
+    opacity: 1;
+    margin-top: 16px;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.version-card__changelog-content ul {
+    padding: 0 0 0 16px;
+    margin: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.changelog-section__title:not(:first-child) {
+    margin-top: 16px;
+}
+
+.changelog-section__title {
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: #222;
+}
+
+.version-card__changelog-content li {
+    margin-bottom: 6px;
+    color: #444;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.version-card__changelog-content li:last-child {
+    margin-bottom: 0;
+}
+
+.version-card__downloads {
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+
+.version-card__downloads-title {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.platform-block {
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+}
+
+.platform-block:last-child {
+    margin-bottom: 0;
+}
+
+.platform-block--windows {
+    background: #f0f7ff;
+    border: 1px solid #c5ddf5;
+}
+
+.platform-block--linux {
+    background: #fff8f0;
+    border: 1px solid #f0d9c0;
+}
+
+.platform-block--windows .platform-label::before {
+    background-image: url("Resources/icons/windows.svg");
+}
+
+.platform-block--windows .platform-label::after {
+    content: "Windows";
+}
+
+.platform-block--linux .platform-label::before {
+    background-image: url("Resources/icons/linux.svg");
+}
+
+.platform-block--linux .platform-label::after {
+    content: "Linux";
+}
+
+.platform-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.platform-label::before {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.platform-block__rows {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.download-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.platform-block__rows .download-row:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.download-row__label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #444;
+    min-width: 90px;
+}
+
+.download-row__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.download-btn::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.download-btn--yandex::before {
+    background-image: url("Resources/icons/yandex-disk.svg");
+}
+
+.download-btn--yandex::after {
+    content: "Яндекс.Диск";
+}
+
+.download-btn--gdrive::before {
+    background-image: url("Resources/icons/google-drive.svg");
+}
+
+.download-btn--gdrive::after {
+    content: "Google Drive";
+}
+
+.download-btn--sourceforge::before {
+    width: 18px;
+    background-image: url("Resources/icons/sourceforge.svg");
+}
+
+.download-btn--sourceforge::after {
+    content: "SourceForge";
+}
+
+.download-btn:hover {
+    background: #f5f5f5;
+    border-color: #bbb;
+}
+
+@media (max-width: 768px) {
+    .downloads-title {
+        font-size: 1.4rem;
+        margin: 20px 0 16px;
+    }
+
+    .version-card {
+        padding: 16px;
+    }
+
+    .download-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .download-row__buttons {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .version-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .version-card__changelog {
+        transition: none;
+    }
+
+    .version-card__changelog-content {
+        transition: none;
+    }
+
+    .version-card__changelog summary::after {
+        transition: none;
+    }
 }
